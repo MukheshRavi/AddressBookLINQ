@@ -12,6 +12,7 @@ namespace AddressBookLINQ
             //addressBookDataTable.UpdateContact("Mukhesh", "Attuluri", "Address", "Vemakotavari Street");
             //addressBookDataTable.GetAllContacts();
             addressBookDataTable.RetrieveByCityOrState("ppm", "Ap");
+            addressBookDataTable.CountByCityOrState("Ppm", "Ap");
         }
     }
 }
