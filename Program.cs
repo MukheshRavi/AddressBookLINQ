@@ -15,7 +15,8 @@ namespace AddressBookLINQ
             //addressBookDataTable.CountByCityOrState("Ppm", "Ap");
             //addressBookDataTable.GetAllByCityOrderByName("Ppm");
             addressBookDataTable.AddAddressBookNameType();
-            addressBookDataTable.GetAllContacts();
+            //addressBookDataTable.GetAllContacts();
+            addressBookDataTable.GetCountByType();
         }
     }
 }
