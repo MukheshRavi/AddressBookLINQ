@@ -100,8 +100,20 @@ namespace AddressBookLINQ
                 Console.WriteLine("phoneNumber:- " + dr.Field<string>("phoneNumber"));
                 Console.WriteLine("eMail:- " + dr.Field<string>("Email"));
             }
-
         }
+        /// <summary>
+        /// UC 7 
+        /// Count by state or city
+        /// </summary>
+        /// <param name="city">The city.</param>
+        /// <param name="state">The state.</param>
+        public void CountByCityOrState(string city, string state)
+        {
+            var contact = from c in table.AsEnumerable()
+                          where c.Field<string>("City") == city && c.Field<string>("State") == state
+                          select c;
 
+            Console.WriteLine("Count of contacts in City:{0} and  State:{1} is {2}", city, state, contact.Count());
+        }
     }
 }
