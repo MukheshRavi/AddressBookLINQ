@@ -49,6 +49,8 @@ namespace AddressBookLINQ
                 Console.WriteLine("zip:- " + dr.Field<string>("Zip"));
                 Console.WriteLine("phoneNumber:- " + dr.Field<string>("phoneNumber"));
                 Console.WriteLine("eMail:- " + dr.Field<string>("Email"));
+                Console.WriteLine("AddressBookName:- " + dr.Field<string>("AddressBookName"));
+                Console.WriteLine("ContactType:- " + dr.Field<string>("ContactType"));
             }
 
         }
@@ -136,9 +138,30 @@ namespace AddressBookLINQ
                 Console.WriteLine("zip:- " + dr.Field<string>("Zip"));
                 Console.WriteLine("phoneNumber:- " + dr.Field<string>("phoneNumber"));
                 Console.WriteLine("eMail:- " + dr.Field<string>("Email"));
+                Console.WriteLine("phoneNumber:- " + dr.Field<string>("phoneNumber"));
+                Console.WriteLine("eMail:- " + dr.Field<string>("Email"));
             }
+        }
+        /// <summary>
+        /// UC 9
+        /// Add address book name and type
+        /// </summary>
+        public void AddAddressBookNameType()
+        {
+            DataColumn column;
+            column = new DataColumn();
+            column.DataType = System.Type.GetType("System.String");
+            column.ColumnName = "AddressBookName";
+            column.AllowDBNull = false;
+            column.DefaultValue = "Mkh";
+            table.Columns.Add(column);
 
-
+            column = new DataColumn();
+            column.DataType = System.Type.GetType("System.String");
+            column.ColumnName = "ContactType";
+            column.AllowDBNull = false;
+            column.DefaultValue = "Friends";
+            table.Columns.Add(column);
         }
     }
 }
