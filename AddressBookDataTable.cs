@@ -65,6 +65,17 @@ namespace AddressBookLINQ
             updateContact[columnName] = newValue;
             Console.WriteLine("Updated Contact");
         }
+        /// <summary>
+        /// UC 5 
+        /// Deletes a specific contact.
+        /// </summary>
+        /// <param name="firstName">The first name.</param>
+        /// <param name="lastName">The last name.</param>
+        public void DeleteContact(string firstName, string lastName)
+        {
+            DataRow deleteContact = table.Select("FirstName = '" + firstName + "' and LastName = '" + lastName + "'").FirstOrDefault();
+            table.Rows.Remove(deleteContact);
+        }
 
     }
 }
