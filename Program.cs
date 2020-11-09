@@ -13,6 +13,7 @@ namespace AddressBookLINQ
             //addressBookDataTable.GetAllContacts();
             addressBookDataTable.RetrieveByCityOrState("ppm", "Ap");
             addressBookDataTable.CountByCityOrState("Ppm", "Ap");
+            addressBookDataTable.GetAllByCityOrderByName("Ppm");
         }
     }
 }
